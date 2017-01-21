@@ -23,6 +23,7 @@ RUN apt-get -y update
 RUN apt-get -y install libsuitesparse-dev
 
 #atlast form source
+WORKDIR /opt
 RUN apt-get source atlas
 RUN apt-get -y build-dep atlas
 RUN apt-get -y install devscripts
